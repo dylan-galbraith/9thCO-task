@@ -45,10 +45,12 @@
         let listItem = document.createElement('li');
         listItem.textContent += i.toString();
         if (i%3 === 0) {
-          listItem.textContent += "Fizz";
+          listItem.textContent += " Fizz";
+          listItem.classList.add('fizz');
         }
         if (i%5 === 0) {
-          listItem.textContent += "Buzz";
+          listItem.textContent += " Buzz";
+          listItem.classList.add('buzz');
         }
         document.getElementById('list').appendChild(listItem); 
       }
