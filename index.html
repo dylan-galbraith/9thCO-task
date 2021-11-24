@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .button {
+      background: black;
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 2rem;
+      border-radius: 5rem;
+    }
+    .button:hover {
+      cursor: pointer;
+      background: green;
+    }
+    #list {
+      list-style: none;
+    }
+    .fizz {
+      color: blue;
+    }
+    .buzz {
+      color: red;
+    }
+    .fizz.buzz {
+      color: purple;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <button onClick="fizzBuzz()">Start</button>
+    <ul id="list">
+    </ul>
+  </div>
+
+  <script>
+    function fizzBuzz() {
+      for(let i=1; i<=100; i++) {
+        let listItem = document.createElement('li');
+        listItem.textContent += i.toString();
+        if (i%3 === 0) {
+          listItem.textContent += "Fizz";
+        }
+        if (i%5 === 0) {
+          listItem.textContent += "Buzz";
+        }
+        document.getElementById('list').appendChild(listItem); 
+      }
+    }
+  </script>
+</body>
+</html>
